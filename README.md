@@ -60,20 +60,17 @@ API ini sudah dilengkapi dengan validasi input menggunakan **Pydantic** dan unit
     Get-Command python  # di Windows PowerShell
     ```
 5.  Tambahkan file `.gitignore` di root folder, isi: `.venv/`
-6. Install FastAPI: pip install "fastapi[standard]"
-7.  Cek FastAPI sudah terinstal: pip show fastapi
-
-pip install fastapi uvicorn pytest
-
-3. Jalankan server FastAPI:
-Jalankan server (development mode): fastapi dev main.py
+6. Install FastAPI: `pip install "fastapi[standard]"`
+7.  Cek FastAPI sudah terinstal: `pip show fastapi`
+8. Jalankan server FastAPI:
+Jalankan server (development mode): `fastapi dev main.py`
 • Akses server: http://127.0.0.1:8000
-
-
-4. Buka dokumentasi interaktif API:
+9. Buka dokumentasi interaktif API:
 Swagger UI → http://127.0.0.1:8000/docs
 Redoc → http://127.0.0.1:8000/redoc
 
 ## 🧪 Testing
 Untuk menjalankan unit test:
+```bash
 pytest -v
+```
