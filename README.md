@@ -64,7 +64,7 @@ API ini sudah dilengkapi dengan validasi input menggunakan **Pydantic** dan unit
 8. Jalankan server FastAPI:
 Jalankan server (development mode): `fastapi dev main.py`
 • Akses server: http://127.0.0.1:8000
-9. Buka dokumentasi interaktif API:
+9. Buka dokumentasi interaktif API: <br>
 Swagger UI → http://127.0.0.1:8000/docs <br>
 Redoc → http://127.0.0.1:8000/redoc
 
@@ -73,3 +73,4 @@ Untuk menjalankan unit test:
 ```bash
 pytest -v
 ```
+Seluruh pengujian diharapkan dapat berjalan tanpa error dengan hasil akhir **PASSED**, sesuai dengan ketentuan.
