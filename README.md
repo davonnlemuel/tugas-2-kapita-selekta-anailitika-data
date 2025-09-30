@@ -46,27 +46,33 @@ API ini sudah dilengkapi dengan validasi input menggunakan **Pydantic** dan unit
    ```bash
    git clone https://github.com/davonnlemuel/tugas-2-kapita-selekta-anailitika-data.git
    cd tugas-2-kapita-selekta-anailitika-data
+    ```
 2. Buat virtual environment & install dependency:
-
+    ```bash
 python -m venv venv
-source venv/bin/activate    # di Linux/Mac
-venv\Scripts\activate       # di Windows
+source venv/bin/activate        # di Linux, MacOS
+venv\Scripts\activate           # di Windows Powwershell
+source .venv/Scripts/activate   # di Windows Bash
+ ```
+3. Cek virtual environment sudah aktif:
+• Linux, macOS, Windows Bash: which python
+• Windows PowerShell: Get-Command python
+
+4.  Tambahkan file .gitignore di root folder, isi: .venv/
+5. Install FastAPI: pip install "fastapi[standard]"
+6.  Cek FastAPI sudah terinstal: pip show fastapi
 
 pip install fastapi uvicorn pytest
 
 3. Jalankan server FastAPI:
-
-uvicorn main:app --reload
+Jalankan server (development mode): fastapi dev main.py
+• Akses server: http://127.0.0.1:8000
 
 
 4. Buka dokumentasi interaktif API:
-
 Swagger UI → http://127.0.0.1:8000/docs
-
 Redoc → http://127.0.0.1:8000/redoc
 
-🧪 Testing
-
+## 🧪 Testing
 Untuk menjalankan unit test:
-
 pytest -v
