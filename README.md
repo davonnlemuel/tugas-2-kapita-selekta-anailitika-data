@@ -1,0 +1,72 @@
+# Users CRUD API 🚀
+
+Project ini adalah implementasi sederhana REST API menggunakan **FastAPI** untuk manajemen data User (Create, Read, Update, Delete).  
+API ini sudah dilengkapi dengan validasi input menggunakan **Pydantic** dan unit test otomatis menggunakan **pytest**.
+
+---
+
+## 📂 Struktur Project
+├── main.py # Entry point FastAPI
+├── modules/
+│ └── items/
+│ ├── routes/
+│ │ ├── createUser.py
+│ │ ├── readUser.py
+│ │ ├── updateUser.py
+│ │ └── deleteUser.py
+│ └── schema/
+│ └── schemas.py # Pydantic models (UserCreate, UserUpdate, UserResponse, RoleEnum)
+├── tests/
+│ └── test_Users.py # Unit tests dengan pytest
+└── requirements.txt # (opsional, daftar dependency)
+
+
+---
+
+## ⚙️ Fitur
+- **Create User** → Tambah user baru (`POST /users/`)
+- **Read User(s)**  
+  - `GET /users/{id}?role=admin` → Admin bisa lihat semua user  
+  - `GET /users/{id}?role=staff` → Staff hanya bisa lihat dirinya sendiri
+- **Update User** → Hanya admin yang bisa update data user (`PUT /users/{id}?role=admin`)
+- **Delete User** → Hanya admin yang bisa hapus user (`DELETE /users/{id}?role=admin`)
+
+---
+
+## 🛠️ Teknologi
+- [FastAPI](https://fastapi.tiangolo.com/) (Backend framework)
+- [Pydantic](https://docs.pydantic.dev/) (Data validation)
+- [pytest](https://docs.pytest.org/) (Testing)
+
+---
+
+## ▶️ Cara Menjalankan
+
+1. Clone repository:
+   ```bash
+   git clone https://github.com/davonnlemuel/tugas-2-kapita-selekta-anailitika-data.git
+   cd tugas-2-kapita-selekta-anailitika-data
+2. Buat virtual environment & install dependency:
+
+python -m venv venv
+source venv/bin/activate    # di Linux/Mac
+venv\Scripts\activate       # di Windows
+
+pip install fastapi uvicorn pytest
+
+3. Jalankan server FastAPI:
+
+uvicorn main:app --reload
+
+
+4. Buka dokumentasi interaktif API:
+
+Swagger UI → http://127.0.0.1:8000/docs
+
+Redoc → http://127.0.0.1:8000/redoc
+
+🧪 Testing
+
+Untuk menjalankan unit test:
+
+pytest -v
