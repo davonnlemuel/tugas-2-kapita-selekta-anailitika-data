@@ -49,18 +49,19 @@ API ini sudah dilengkapi dengan validasi input menggunakan **Pydantic** dan unit
     ```
 2. Buat virtual environment & install dependency:
     ```bash
-python -m venv venv
-source venv/bin/activate        # di Linux, MacOS
-venv\Scripts\activate           # di Windows Powwershell
-source .venv/Scripts/activate   # di Windows Bash
- ```
+    python -m venv venv
+    source venv/bin/activate        # di Linux, MacOS
+    venv\Scripts\activate           # di Windows Powwershell
+    source .venv/Scripts/activate   # di Windows Bash
+    ```
 3. Cek virtual environment sudah aktif:
-• Linux, macOS, Windows Bash: which python
-• Windows PowerShell: Get-Command python
-
-4.  Tambahkan file .gitignore di root folder, isi: .venv/
-5. Install FastAPI: pip install "fastapi[standard]"
-6.  Cek FastAPI sudah terinstal: pip show fastapi
+    ```bash
+    which python        # di Linux, macOS, Windows Bash: 
+    Get-Command python  # di Windows PowerShell
+    ```
+5.  Tambahkan file `.gitignore` di root folder, isi: `.venv/`
+6. Install FastAPI: pip install "fastapi[standard]"
+7.  Cek FastAPI sudah terinstal: pip show fastapi
 
 pip install fastapi uvicorn pytest
 
