@@ -7,19 +7,18 @@ API ini sudah dilengkapi dengan validasi input menggunakan **Pydantic** dan unit
 
 ## 📂 Struktur Project
 ├── main.py # Entry point FastAPI
-├── modules/
-│ └── items/
-│ ├── routes/
-│ │ ├── createUser.py
-│ │ ├── readUser.py
-│ │ ├── updateUser.py
-│ │ └── deleteUser.py
-│ └── schema/
-│ └── schemas.py # Pydantic models (UserCreate, UserUpdate, UserResponse, RoleEnum)
-├── tests/
-│ └── test_Users.py # Unit tests dengan pytest
-└── requirements.txt # (opsional, daftar dependency)
-
+├── modules/ <br>
+│ └── items/ <br>
+│ ├── routes/ <br>
+│ │ ├── createUser.py <br>
+│ │ ├── readUser.py <br>
+│ │ ├── updateUser.py <br>
+│ │ └── deleteUser.py <br>
+│ └── schema/ <br>
+│ └── schemas.py # Pydantic models (UserCreate, UserUpdate, UserResponse, RoleEnum) <br>
+├── tests/ <br>
+│ └── test_Users.py # Unit tests dengan pytest <br>
+└── requirements.txt # (opsional, daftar dependency) <br>
 
 ---
 
@@ -66,7 +65,7 @@ API ini sudah dilengkapi dengan validasi input menggunakan **Pydantic** dan unit
 Jalankan server (development mode): `fastapi dev main.py`
 • Akses server: http://127.0.0.1:8000
 9. Buka dokumentasi interaktif API:
-Swagger UI → http://127.0.0.1:8000/docs
+Swagger UI → http://127.0.0.1:8000/docs <br>
 Redoc → http://127.0.0.1:8000/redoc
 
 ## 🧪 Testing
